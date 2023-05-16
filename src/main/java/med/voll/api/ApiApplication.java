@@ -1,6 +1,5 @@
 package med.voll.api;
 
-import med.voll.api.medico.DadosCadastroMedico;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
