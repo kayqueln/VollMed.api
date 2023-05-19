@@ -16,7 +16,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 public class PacienteController {
 
     @Autowired
-    private PacinteRepository repository;
+    private PacienteRepository repository;
 
     @PostMapping
     @Transactional
