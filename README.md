@@ -3,7 +3,8 @@ Esse projeto consiste em um sistema que gerencia uma clinica médica através de
 Tecnologias usadas: 
 - Java
 - Spring boot, 
-- JPA, 
+- JPA,
+- JWT, 
 - Hibernate, 
 - MySql 
 - Software Insomnia que foi utilizado para testar a API. 
