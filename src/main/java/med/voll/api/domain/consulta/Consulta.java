@@ -17,7 +17,7 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-public final class Consulta {
+public final class Consulta { 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

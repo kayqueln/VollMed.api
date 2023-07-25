@@ -1,5 +1,6 @@
 package med.voll.api.controler;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import med.voll.api.domain.paciente.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/pacientes")
+@SecurityRequirement(name = "bearer-key")
 public class PacienteController {
 
     @Autowired
@@ -40,7 +42,7 @@ public class PacienteController {
         return ResponseEntity.ok(new DadosDetalhamentoPaciente(paciente));
     }
 
-    @PutMapping
+    @PutMapping  
     @Transactional
     public ResponseEntity atualizar(@RequestBody @Valid DadosAtualizacaoPaciente dados){
         var paciente = repository.getReferenceById(dados.id());
@@ -49,7 +51,7 @@ public class PacienteController {
         return ResponseEntity.ok(new DadosDetalhamentoPaciente(paciente));
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id}") 
     @Transactional
     public  ResponseEntity excluir(@PathVariable Long id){
         var paciente = repository.getReferenceById(id);
