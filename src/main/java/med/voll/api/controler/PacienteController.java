@@ -42,7 +42,7 @@ public class PacienteController {
         return ResponseEntity.ok(new DadosDetalhamentoPaciente(paciente));
     }
 
-    @PutMapping
+    @PutMapping  
     @Transactional
     public ResponseEntity atualizar(@RequestBody @Valid DadosAtualizacaoPaciente dados){
         var paciente = repository.getReferenceById(dados.id());
@@ -51,7 +51,7 @@ public class PacienteController {
         return ResponseEntity.ok(new DadosDetalhamentoPaciente(paciente));
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id}") 
     @Transactional
     public  ResponseEntity excluir(@PathVariable Long id){
         var paciente = repository.getReferenceById(id);
